@@ -1,0 +1,9 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+
+.gallery .photo {
+    max-height: 240px;
+}
