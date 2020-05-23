@@ -10,7 +10,7 @@ const Gallery = () => {
           node {
             id
             name
-            relativePath
+            publicURL
             sharp: childImageSharp {
               fluid {
                 ...GatsbyImageSharpFluid_withWebp
@@ -25,13 +25,14 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {images.edges.map(({ node }) => (
-        <Img
-          className="photo"
-          id={node.id}
-          fluid={node.sharp.fluid}
-          fadeIn="soft"
-          alt={node.name}
-        />
+        <a href={node.publicURL} id={node.id} target="_blank">
+          <Img
+            className="photo"
+            fluid={node.sharp.fluid}
+            fadeIn="soft"
+            alt={node.name}
+          />
+        </a>
       ))}
     </div>
   )
