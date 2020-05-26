@@ -7,7 +7,7 @@ const Gallery = () => {
     query {
       images: allFile(
         filter: { absolutePath: { regex: "//gallery/" } }
-        sort: { order: DESC, fields: modifiedTime }
+        sort: { order: DESC, fields: birthTime }
       ) {
         edges {
           node {
