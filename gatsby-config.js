@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Photo Gallery`,
+    title: `iFoto`,
     description: `Photo gallery with gatsbyjs`,
     author: `@coscakir`,
   },

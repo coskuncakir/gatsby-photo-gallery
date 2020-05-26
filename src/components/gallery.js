@@ -25,7 +25,7 @@ const Gallery = () => {
   return (
     <div className="gallery">
       {images.edges.map(({ node }) => (
-        <a href={node.publicURL} id={node.id} target="_blank">
+        <a href={node.publicURL} id={node.id} target="_blank" rel="noreferrer">
           <Img
             className="photo"
             fluid={node.sharp.fluid}

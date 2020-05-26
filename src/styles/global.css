@@ -1,10 +1,11 @@
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 2rem;
+    grid-template-columns: 1fr;
     row-gap: 2rem;
+    max-width: 600px;
 }
 
 .gallery .photo {
-    height: 240px;
+    border-radius: 4px;
+    max-height: 600px;
 }
