@@ -5,7 +5,10 @@ import Img from "gatsby-image"
 const Gallery = () => {
   const { images } = useStaticQuery(graphql`
     query {
-      images: allFile(filter: { absolutePath: { regex: "//gallery/" } }) {
+      images: allFile(
+        filter: { absolutePath: { regex: "//gallery/" } }
+        sort: { order: DESC, fields: modifiedTime }
+      ) {
         edges {
           node {
             id
